@@ -7,7 +7,8 @@ namespace TommorrowSoft.Examine.Infrastructure.Repositories.Map
     {
         public PartyMoneyMap()
         {
-            Component(x => x.Id, m => m.Map(y => y.Code).Unique());
+//          Component(x => x.Id, m => m.Map(y => y.Code).Unique());
+            Map(x => x.Code);
             Map(x => x.Name);
             Map(x => x.PostWage);
             Map(x => x.SalaryRankWage);

@@ -10,12 +10,11 @@ namespace TommorrowSoft.Examine.Domian
 
         public PartyMoney(string code)
         {
-            Id = PartyMoneyIdentifier.Of(code);
+            Code = code;
+             
         }
 
-
-        public virtual PartyMoneyIdentifier Id { get; set; }
-        
+        public virtual PartyMoneyIdentifier Id { get { return PartyMoneyIdentifier.Of(Code);}}      
 
         public virtual string Name { get; set; }
         public virtual decimal PostWage { get; set; }
@@ -28,5 +27,6 @@ namespace TommorrowSoft.Examine.Domian
         public virtual decimal OldAgeInsurance { get; set; }
         public virtual decimal JobAnnuity { get; set; }
         public virtual decimal IndividualIncomeTax { get; set; }
+        public virtual string  Code { get; set; }
     }
 }

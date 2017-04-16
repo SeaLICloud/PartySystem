@@ -4,13 +4,14 @@ namespace TommorrowSoft.Examine.Domian
 {
     public struct PartyMoneyIdentifier : IBusinessIdentifier
     {
+
+        public string Code { get; set; }
+
+
         public PartyMoneyIdentifier(string code) : this()
         {
             Code = code;
         }
-
-        public string Code { get; set; }
-
 
         public static PartyMoneyIdentifier Of(string code)
         {

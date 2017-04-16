@@ -10,14 +10,13 @@ namespace TommorrowSoft.Examine.Test.集成测试
 {
     public class 测试对象 : BaseActionSpec
     {
-        protected Establish WorkstageManageContext =
-            () =>
+        protected Establish WorkstageManageContext =() =>
             {
                 AdminService = A<IAdminService>();
-
                 var fileHelper = MockRepository.GenerateMock<IFileHelper>();
                 IoC.Current.RegisterInstance(typeof(IFileHelper), fileHelper);
             };
+       
         protected static IAdminService AdminService;
     }
 }

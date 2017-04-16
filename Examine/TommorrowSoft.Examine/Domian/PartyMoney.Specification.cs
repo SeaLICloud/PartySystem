@@ -18,7 +18,7 @@ namespace TommorrowSoft.Examine.Domian
 
             public override Expression<Func<PartyMoney, bool>> IsSatisfiedBy()
             {
-                return x => x.Id.Code == _id.Code;
+                return x => x.Code == _id.Code;
             }
         }
     }
