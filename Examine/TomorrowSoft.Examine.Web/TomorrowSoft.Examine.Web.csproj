@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29230C64-ECC5-48ED-A329-8D0362781DDE}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TomorrowSoft.Examine.Web</RootNamespace>
+    <AssemblyName>TomorrowSoft.Examine.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TomorrowSoft.Framework\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\TomorrowSoft.Framework\packages\System.Data.SQLite.1.0.91.3\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>..\TomorrowSoft.Framework\packages\System.Data.SQLite.1.0.91.3\lib\net40\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\TomorrowSoft.Framework\packages\System.Data.SQLite.1.0.91.3\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Tomorrow.Register">
+      <HintPath>..\TomorrowSoft.Framework\packages\Tomorrow.Register\Tomorrow.Register.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\PartyMoneyController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helps\BaseControllers\AdminAreaController.cs" />
+    <Compile Include="Helps\Keys.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\images\1.png" />
+    <Content Include="Content\images\2.png" />
+    <Content Include="Content\images\3.png" />
+    <Content Include="Content\images\4.png" />
+    <Content Include="Content\images\5.png" />
+    <Content Include="Content\images\6.png" />
+    <Content Include="Content\images\7.png" />
+    <Content Include="Content\images\8.png" />
+    <Content Include="Content\images\9.png" />
+    <Content Include="Content\images\bc.png" />
+    <Content Include="Content\images\Cooperative-black.png" />
+    <Content Include="Content\images\Cooperative-white.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\NoPhoto.jpg" />
+    <Content Include="Content\js\echarts.min.js" />
+    <Content Include="Content\js\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Content\js\Examine.js" />
+    <Content Include="Content\js\pjax\jquery.pjax.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\gebo\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\themes\gebo\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\themes\gebo\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\themes\gebo\css\blue.css" />
+    <Content Include="Content\themes\gebo\css\brown.css" />
+    <Content Include="Content\themes\gebo\css\dark.css" />
+    <Content Include="Content\themes\gebo\css\eastern_blue.css" />
+    <Content Include="Content\themes\gebo\css\green.css" />
+    <Content Include="Content\themes\gebo\css\ie.css" />
+    <Content Include="Content\themes\gebo\css\style.css" />
+    <Content Include="Content\themes\gebo\css\tamarillo.css" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\alert.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\bg_transparent.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\confirm.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\about.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\clipboard-add.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\clipboard-clear.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\clipboard.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\close-clicked.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\close-hover.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\close.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\copy.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\download.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\folder-new.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\maximize.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\move.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\refresh.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\rename.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\select.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\settings.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\upload.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\icons\view.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\kcf_logo.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\loading.gif" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\tree\denied.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\tree\folder.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\tree\folder_current.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\tree\minus.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\img\tree\plus.png" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\init.js" />
+    <Content Include="Content\themes\gebo\file-manager\themes\oxygen\style.css" />
+    <Content Include="Content\themes\gebo\img\acc_icons.png" />
+    <Content Include="Content\themes\gebo\img\adt-icons.png" />
+    <Content Include="Content\themes\gebo\img\bg_a.png" />
+    <Content Include="Content\themes\gebo\img\bg_b.png" />
+    <Content Include="Content\themes\gebo\img\bg_c.png" />
+    <Content Include="Content\themes\gebo\img\bg_d.png" />
+    <Content Include="Content\themes\gebo\img\bg_e.png" />
+    <Content Include="Content\themes\gebo\img\bullet_blue.png" />
+    <Content Include="Content\themes\gebo\img\bullet_green.png" />
+    <Content Include="Content\themes\gebo\img\bullet_orange.png" />
+    <Content Include="Content\themes\gebo\img\bullet_red.png" />
+    <Content Include="Content\themes\gebo\img\error_big.png" />
+    <Content Include="Content\themes\gebo\img\external_link.png" />
+    <Content Include="Content\themes\gebo\img\flags\flags.css" />
+    <Content Include="Content\themes\gebo\img\flags\flags.png" />
+    <Content Include="Content\themes\gebo\img\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\themes\gebo\img\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\themes\gebo\img\gCons\add-item.png" />
+    <Content Include="Content\themes\gebo\img\gCons\addressbook.png" />
+    <Content Include="Content\themes\gebo\img\gCons\agent.png" />
+    <Content Include="Content\themes\gebo\img\gCons\apple.png" />
+    <Content Include="Content\themes\gebo\img\gCons\arrow-round.png" />
+    <Content Include="Content\themes\gebo\img\gCons\badge.png" />
+    <Content Include="Content\themes\gebo\img\gCons\bar-chart-02.png" />
+    <Content Include="Content\themes\gebo\img\gCons\bar-chart.png" />
+    <Content Include="Content\themes\gebo\img\gCons\battery-full.png" />
+    <Content Include="Content\themes\gebo\img\gCons\bird.png" />
+    <Content Include="Content\themes\gebo\img\gCons\boat.png" />
+    <Content Include="Content\themes\gebo\img\gCons\bookmark.png" />
+    <Content Include="Content\themes\gebo\img\gCons\briefcase.png" />
+    <Content Include="Content\themes\gebo\img\gCons\calculator.png" />
+    <Content Include="Content\themes\gebo\img\gCons\calendar.png" />
+    <Content Include="Content\themes\gebo\img\gCons\cassette.png" />
+    <Content Include="Content\themes\gebo\img\gCons\chain.png" />
+    <Content Include="Content\themes\gebo\img\gCons\chat-.png" />
+    <Content Include="Content\themes\gebo\img\gCons\chat-02.png" />
+    <Content Include="Content\themes\gebo\img\gCons\cloud-filled.png" />
+    <Content Include="Content\themes\gebo\img\gCons\cloud-outline.png" />
+    <Content Include="Content\themes\gebo\img\gCons\computer.png" />
+    <Content Include="Content\themes\gebo\img\gCons\configuration.png" />
+    <Content Include="Content\themes\gebo\img\gCons\configuration02.png" />
+    <Content Include="Content\themes\gebo\img\gCons\connected.png" />
+    <Content Include="Content\themes\gebo\img\gCons\connections.png" />
+    <Content Include="Content\themes\gebo\img\gCons\container.png" />
+    <Content Include="Content\themes\gebo\img\gCons\copy-item.png" />
+    <Content Include="Content\themes\gebo\img\gCons\database.png" />
+    <Content Include="Content\themes\gebo\img\gCons\disc.png" />
+    <Content Include="Content\themes\gebo\img\gCons\dollar.png" />
+    <Content Include="Content\themes\gebo\img\gCons\download.png" />
+    <Content Include="Content\themes\gebo\img\gCons\edit.png" />
+    <Content Include="Content\themes\gebo\img\gCons\email.png" />
+    <Content Include="Content\themes\gebo\img\gCons\fan.png" />
+    <Content Include="Content\themes\gebo\img\gCons\fancy-globe.png" />
+    <Content Include="Content\themes\gebo\img\gCons\female-user.png" />
+    <Content Include="Content\themes\gebo\img\gCons\fire.png" />
+    <Content Include="Content\themes\gebo\img\gCons\first-aid.png" />
+    <Content Include="Content\themes\gebo\img\gCons\flag.png" />
+    <Content Include="Content\themes\gebo\img\gCons\flower.png" />
+    <Content Include="Content\themes\gebo\img\gCons\full-screen.png" />
+    <Content Include="Content\themes\gebo\img\gCons\glasses.png" />
+    <Content Include="Content\themes\gebo\img\gCons\globe.png" />
+    <Content Include="Content\themes\gebo\img\gCons\happy-face.png" />
+    <Content Include="Content\themes\gebo\img\gCons\headphone.png" />
+    <Content Include="Content\themes\gebo\img\gCons\heart.png" />
+    <Content Include="Content\themes\gebo\img\gCons\home.png" />
+    <Content Include="Content\themes\gebo\img\gCons\ID.png" />
+    <Content Include="Content\themes\gebo\img\gCons\ipod.png" />
+    <Content Include="Content\themes\gebo\img\gCons\lab.png" />
+    <Content Include="Content\themes\gebo\img\gCons\lady.png" />
+    <Content Include="Content\themes\gebo\img\gCons\lamp.png" />
+    <Content Include="Content\themes\gebo\img\gCons\leaves.png" />
+    <Content Include="Content\themes\gebo\img\gCons\light.png" />
+    <Content Include="Content\themes\gebo\img\gCons\line-globe.png" />
+    <Content Include="Content\themes\gebo\img\gCons\lock.png" />
+    <Content Include="Content\themes\gebo\img\gCons\lookup.png" />
+    <Content Include="Content\themes\gebo\img\gCons\male-user.png" />
+    <Content Include="Content\themes\gebo\img\gCons\microphone.png" />
+    <Content Include="Content\themes\gebo\img\gCons\mobile.png" />
+    <Content Include="Content\themes\gebo\img\gCons\mobile2.png" />
+    <Content Include="Content\themes\gebo\img\gCons\mouse.png" />
+    <Content Include="Content\themes\gebo\img\gCons\multi-agents.png" />
+    <Content Include="Content\themes\gebo\img\gCons\music-node.png" />
+    <Content Include="Content\themes\gebo\img\gCons\network-pc.png" />
+    <Content Include="Content\themes\gebo\img\gCons\network.png" />
+    <Content Include="Content\themes\gebo\img\gCons\next-item.png" />
+    <Content Include="Content\themes\gebo\img\gCons\phone.png" />
+    <Content Include="Content\themes\gebo\img\gCons\pie-chart.png" />
+    <Content Include="Content\themes\gebo\img\gCons\pin.png" />
+    <Content Include="Content\themes\gebo\img\gCons\plane.png" />
+    <Content Include="Content\themes\gebo\img\gCons\print.png" />
+    <Content Include="Content\themes\gebo\img\gCons\processing-02.png" />
+    <Content Include="Content\themes\gebo\img\gCons\processing.png" />
+    <Content Include="Content\themes\gebo\img\gCons\push-pin.png" />
+    <Content Include="Content\themes\gebo\img\gCons\recycle-empty.png" />
+    <Content Include="Content\themes\gebo\img\gCons\recycle-full.png" />
+    <Content Include="Content\themes\gebo\img\gCons\reload.png" />
+    <Content Include="Content\themes\gebo\img\gCons\rss.png" />
+    <Content Include="Content\themes\gebo\img\gCons\satellite.png" />
+    <Content Include="Content\themes\gebo\img\gCons\save.png" />
+    <Content Include="Content\themes\gebo\img\gCons\scale.png" />
+    <Content Include="Content\themes\gebo\img\gCons\Scissors.png" />
+    <Content Include="Content\themes\gebo\img\gCons\screen.png" />
+    <Content Include="Content\themes\gebo\img\gCons\search.png" />
+    <Content Include="Content\themes\gebo\img\gCons\server.png" />
+    <Content Include="Content\themes\gebo\img\gCons\shield.png" />
+    <Content Include="Content\themes\gebo\img\gCons\shut-down.png" />
+    <Content Include="Content\themes\gebo\img\gCons\star.png" />
+    <Content Include="Content\themes\gebo\img\gCons\tag.png" />
+    <Content Include="Content\themes\gebo\img\gCons\tap.png" />
+    <Content Include="Content\themes\gebo\img\gCons\tree.png" />
+    <Content Include="Content\themes\gebo\img\gCons\umbrella.png" />
+    <Content Include="Content\themes\gebo\img\gCons\unlock.png" />
+    <Content Include="Content\themes\gebo\img\gCons\usb.png" />
+    <Content Include="Content\themes\gebo\img\gCons\van.png" />
+    <Content Include="Content\themes\gebo\img\gCons\wifi.png" />
+    <Content Include="Content\themes\gebo\img\gCons\world.png" />
+    <Content Include="Content\themes\gebo\img\poster.jpg" />
+    <Content Include="Content\themes\gebo\img\sidebar_switch.png" />
+    <Content Include="Content\themes\gebo\img\spinner_arrows.gif" />
+    <Content Include="Content\themes\gebo\img\splashy\splashy.css" />
+    <Content Include="Content\themes\gebo\img\splashy\splashy.png" />
+    <Content Include="Content\themes\gebo\img\ui.totop.png" />
+    <Content Include="Content\themes\gebo\img\user_avatar.png" />
+    <Content Include="Content\themes\gebo\img\vid_local.png" />
+    <Content Include="Content\themes\gebo\img\vid_vimeo.png" />
+    <Content Include="Content\themes\gebo\img\vid_yt.png" />
+    <Content Include="Content\themes\gebo\img\vimeo.png" />
+    <Content Include="Content\themes\gebo\js\bootstrap.plugins.min.js" />
+    <Content Include="Content\themes\gebo\js\forms\jquery.autosize.min.js" />
+    <Content Include="Content\themes\gebo\js\forms\jquery.counter.min.js" />
+    <Content Include="Content\themes\gebo\js\forms\jquery.inputmask.min.js" />
+    <Content Include="Content\themes\gebo\js\forms\jquery.progressbar.anim.js" />
+    <Content Include="Content\themes\gebo\js\forms\jquery.ui.touch-punch.min.js" />
+    <Content Include="Content\themes\gebo\js\gmap3.min.js" />
+    <Content Include="Content\themes\gebo\js\ie\html5.js" />
+    <Content Include="Content\themes\gebo\js\ie\respond.min.js" />
+    <Content Include="Content\themes\gebo\js\ios-orientationchange-fix.js" />
+    <Content Include="Content\themes\gebo\js\jquery-migrate.min.js" />
+    <Content Include="Content\themes\gebo\js\jquery.actual.min.js" />
+    <Content Include="Content\themes\gebo\js\jquery.debouncedresize.min.js" />
+    <Content Include="Content\themes\gebo\js\jquery.easing.1.3.min.js" />
+    <Content Include="Content\themes\gebo\js\jquery.imagesloaded.min.js" />
+    <Content Include="Content\themes\gebo\js\jquery.mediaTable.min.js" />
+    <Content Include="Content\themes\gebo\js\jquery.min.js" />
+    <Content Include="Content\themes\gebo\js\jquery.mockjax.js" />
+    <Content Include="Content\themes\gebo\js\jquery.peity.min.js" />
+    <Content Include="Content\themes\gebo\js\jquery.wookmark.js" />
+    <Content Include="Content\themes\gebo\js\jquery_cookie_min.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_calendar.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_charts.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_chat.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_common.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_dashboard.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_datatables.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_dynamic_tree.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_editable_elements.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_explorer.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_floating_header.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_forms.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_gallery.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_icons.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_mailbox.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_maps.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_notifications.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_search.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_tables.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_user_profile.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_user_static.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_validation.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_widgets.js" />
+    <Content Include="Content\themes\gebo\js\pages\gebo_wizard.js" />
+    <Content Include="Content\themes\gebo\js\selectNav.js" />
+    <Content Include="Content\themes\gebo\lib\antiscroll\antiscroll.js" />
+    <Content Include="Content\themes\gebo\lib\antiscroll\jquery-mousewheel.js" />
+    <Content Include="Content\themes\gebo\lib\bootstrap-switch\dist\css\bootstrap3\bootstrap-switch.min.css" />
+    <Content Include="Content\themes\gebo\lib\bootstrap-switch\dist\js\bootstrap-switch.min.js" />
+    <Content Include="Content\themes\gebo\lib\chosen\chosen-sprite.png" />
+    <Content Include="Content\themes\gebo\lib\chosen\chosen-sprite_402x.png" />
+    <Content Include="Content\themes\gebo\lib\chosen\chosen.css" />
+    <Content Include="Content\themes\gebo\lib\chosen\chosen.jquery.min.js" />
+    <Content Include="Content\themes\gebo\lib\CLEditor\images\buttons.gif" />
+    <Content Include="Content\themes\gebo\lib\CLEditor\jquery.cleditor.css" />
+    <Content Include="Content\themes\gebo\lib\CLEditor\jquery.cleditor.icon.min.js" />
+    <Content Include="Content\themes\gebo\lib\CLEditor\jquery.cleditor.js" />
+    <Content Include="Content\themes\gebo\lib\colorbox\colorbox.css" />
+    <Content Include="Content\themes\gebo\lib\colorbox\images\controls.png" />
+    <Content Include="Content\themes\gebo\lib\colorbox\images\loading.gif" />
+    <Content Include="Content\themes\gebo\lib\colorbox\jquery.colorbox.min.js" />
+    <Content Include="Content\themes\gebo\lib\colorpicker\bootstrap-colorpicker.js" />
+    <Content Include="Content\themes\gebo\lib\colorpicker\css\colorpicker.css" />
+    <Content Include="Content\themes\gebo\lib\colorpicker\img\alpha.png" />
+    <Content Include="Content\themes\gebo\lib\colorpicker\img\hue.png" />
+    <Content Include="Content\themes\gebo\lib\colorpicker\img\saturation.png" />
+    <Content Include="Content\themes\gebo\lib\complexify\jquery.complexify.min.js" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\Scroller\media\js\dataTables.scroller.min.js" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\Scroller\media\js\Scroller.min.js" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\css\TableTools.css" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\background.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\collection.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\collection_hover.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\copy.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\copy_hover.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\csv.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\csv_hover.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\pdf.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\pdf_hover.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\print.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\print_hover.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\xls.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\images\xls_hover.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\js\TableTools.min.js" />
+    <Content Include="Content\themes\gebo\lib\datatables\extras\TableTools\media\js\ZeroClipboard.js" />
+    <Content Include="Content\themes\gebo\lib\datatables\images\sort_asc.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\images\sort_both.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\images\sort_desc.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Content\themes\gebo\lib\datatables\jquery.dataTables.bootstrap.min.js" />
+    <Content Include="Content\themes\gebo\lib\datatables\jquery.dataTables.min.js" />
+    <Content Include="Content\themes\gebo\lib\datatables\jquery.dataTables.sorting.js" />
+    <Content Include="Content\themes\gebo\lib\datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="Content\themes\gebo\lib\datepicker\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="Content\themes\gebo\lib\datepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Content\themes\gebo\lib\datepicker\datepicker.css" />
+    <Content Include="Content\themes\gebo\lib\dynatree\dist\jquery.dynatree.min.js" />
+    <Content Include="Content\themes\gebo\lib\dynatree\src\skin-vista\icons.gif" />
+    <Content Include="Content\themes\gebo\lib\dynatree\src\skin-vista\loading.gif" />
+    <Content Include="Content\themes\gebo\lib\dynatree\src\skin-vista\ui.dynatree.css" />
+    <Content Include="Content\themes\gebo\lib\dynatree\src\skin\icons-rtl.gif" />
+    <Content Include="Content\themes\gebo\lib\dynatree\src\skin\icons.gif" />
+    <Content Include="Content\themes\gebo\lib\dynatree\src\skin\loading.gif" />
+    <Content Include="Content\themes\gebo\lib\dynatree\src\skin\ui.dynatree.css" />
+    <Content Include="Content\themes\gebo\lib\dynatree\src\skin\vline-rtl.gif" />
+    <Content Include="Content\themes\gebo\lib\dynatree\src\skin\vline.gif" />
+    <Content Include="Content\themes\gebo\lib\floating_header\jquery.list.min.js" />
+    <Content Include="Content\themes\gebo\lib\flot.tooltip\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\themes\gebo\lib\flot\excanvas.js" />
+    <Content Include="Content\themes\gebo\lib\flot\excanvas.min.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.curvedLines.min.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.min.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.multihighlight.min.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.orderBars.min.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.pie.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.pie.min.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.pyramid.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.resize.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.resize.min.js" />
+    <Content Include="Content\themes\gebo\lib\flot\jquery.flot.time.min.js" />
+    <Content Include="Content\themes\gebo\lib\form\jquery.form.min.js" />
+    <Content Include="Content\themes\gebo\lib\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\themes\gebo\lib\fullcalendar\fullcalendar_gebo.css" />
+    <Content Include="Content\themes\gebo\lib\fullcalendar\gcal.js" />
+    <Content Include="Content\themes\gebo\lib\google-code-prettify\prettify.css" />
+    <Content Include="Content\themes\gebo\lib\google-code-prettify\prettify.min.js" />
+    <Content Include="Content\themes\gebo\lib\hint_css\hint.min.css" />
+    <Content Include="Content\themes\gebo\lib\jBreadcrumbs\css\BreadCrumb.css" />
+    <Content Include="Content\themes\gebo\lib\jBreadcrumbs\Images\ChevronOverlay.png" />
+    <Content Include="Content\themes\gebo\lib\jBreadcrumbs\js\jquery.jBreadCrumb.1.1.min.js" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\css\Aristo\Aristo.css" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\css\Aristo\images\bg_fallback.png" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\css\Aristo\images\icon_sprite.png" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\css\Aristo\images\progress_bar.gif" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\css\Aristo\images\slider_handles.png" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\css\Aristo\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\css\Aristo\images\ui-icons_222222_5F256x240.png" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\css\Aristo\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\css\Aristo\images\ui-icons_454545_5F256x240.png" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\external\globalize.js" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\jquery-ui-1.10.0.custom.min.js" />
+    <Content Include="Content\themes\gebo\lib\jquery-ui\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="Content\themes\gebo\lib\list_js\list.js" />
+    <Content Include="Content\themes\gebo\lib\list_js\list.min.js" />
+    <Content Include="Content\themes\gebo\lib\list_js\plugins\paging\list.paging.js" />
+    <Content Include="Content\themes\gebo\lib\list_js\plugins\paging\list.paging.min.js" />
+    <Content Include="Content\themes\gebo\lib\moment\moment.min.js" />
+    <Content Include="Content\themes\gebo\lib\moment_js\moment.min.js" />
+    <Content Include="Content\themes\gebo\lib\multi-select\css\multi-select.css" />
+    <Content Include="Content\themes\gebo\lib\multi-select\img\switch.gif" />
+    <Content Include="Content\themes\gebo\lib\multi-select\js\jquery.multi-select.js" />
+    <Content Include="Content\themes\gebo\lib\multi-select\js\jquery.quicksearch.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\i18n\en.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\i18n\zh_CN.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\css\jquery.plupload.queue.css" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\img\backgrounds.gif" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\img\buttons-disabled.png" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\img\buttons.png" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\img\delete.gif" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\img\done.gif" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\img\error.gif" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\img\throbber.gif" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\img\transp50.png" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\jquery.plupload.queue.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.plupload.queue\jquery.plupload.queue.min.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.ui.plupload\css\jquery.ui.plupload.css" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.ui.plupload\img\loading.gif" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.ui.plupload\img\plupload.png" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.ui.plupload\jquery.ui.plupload.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\jquery.ui.plupload\jquery.ui.plupload.min.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\moxie.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\moxie.min.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\Moxie.swf" />
+    <Content Include="Content\themes\gebo\lib\plupload\Moxie.xap" />
+    <Content Include="Content\themes\gebo\lib\plupload\plupload.dev.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\plupload.full.min.js" />
+    <Content Include="Content\themes\gebo\lib\plupload\plupload.min.js" />
+    <Content Include="Content\themes\gebo\lib\qtip2\jquery.qtip.min.css" />
+    <Content Include="Content\themes\gebo\lib\qtip2\jquery.qtip.min.js" />
+    <Content Include="Content\themes\gebo\lib\select2\select2-spinner.gif" />
+    <Content Include="Content\themes\gebo\lib\select2\select2.css" />
+    <Content Include="Content\themes\gebo\lib\select2\select2.js" />
+    <Content Include="Content\themes\gebo\lib\select2\select2.png" />
+    <Content Include="Content\themes\gebo\lib\select2\select2x2.png" />
+    <Content Include="Content\themes\gebo\lib\slimScroll\jquery.slimscroll.js" />
+    <Content Include="Content\themes\gebo\lib\smoke\smoke.js" />
+    <Content Include="Content\themes\gebo\lib\smoke\themes\gebo.css" />
+    <Content Include="Content\themes\gebo\lib\stepy\css\jquery.stepy.css" />
+    <Content Include="Content\themes\gebo\lib\stepy\img\nav_dot.gif" />
+    <Content Include="Content\themes\gebo\lib\stepy\js\jquery.stepy.min.js" />
+    <Content Include="Content\themes\gebo\lib\sticky\sticky.css" />
+    <Content Include="Content\themes\gebo\lib\sticky\sticky.min.js" />
+    <Content Include="Content\themes\gebo\lib\tag_handler\css\jquery.taghandler.css" />
+    <Content Include="Content\themes\gebo\lib\tag_handler\images\loader.gif" />
+    <Content Include="Content\themes\gebo\lib\tag_handler\images\tag_remove.cur" />
+    <Content Include="Content\themes\gebo\lib\tag_handler\images\tag_update.png" />
+    <Content Include="Content\themes\gebo\lib\tag_handler\jquery.taghandler.min.js" />
+    <Content Include="Content\themes\gebo\lib\timepicker\css\bootstrap-timepicker.css" />
+    <Content Include="Content\themes\gebo\lib\timepicker\js\bootstrap-timepicker.min.js" />
+    <Content Include="Content\themes\gebo\lib\tinymce\jquery.tinymce.min.js" />
+    <Content Include="Content\themes\gebo\lib\tiny_mce\jquery.tinymce.js" />
+    <Content Include="Content\themes\gebo\lib\tiny_mce\tiny_mce.js" />
+    <Content Include="Content\themes\gebo\lib\typeahead\typeahead.min.js" />
+    <Content Include="Content\themes\gebo\lib\UItoTop\jquery.ui.totop.min.js" />
+    <Content Include="Content\themes\gebo\lib\uniform\Aristo\images\sprite-aristo.png" />
+    <Content Include="Content\themes\gebo\lib\uniform\Aristo\uniform.aristo.css" />
+    <Content Include="Content\themes\gebo\lib\uniform\jquery.uniform.min.js" />
+    <Content Include="Content\themes\gebo\lib\validation\jquery.validate.js" />
+    <Content Include="Content\themes\gebo\lib\validation\jquery.validate.min.js" />
+    <Content Include="Content\themes\gebo\lib\validation\jquery.validateextend.js" />
+    <Content Include="Content\themes\gebo\lib\x-editable\css\bootstrap-editable.css" />
+    <Content Include="Content\themes\gebo\lib\x-editable\img\clear.png" />
+    <Content Include="Content\themes\gebo\lib\x-editable\img\loading.gif" />
+    <Content Include="Content\themes\gebo\lib\x-editable\inputs-ext\address\address.css" />
+    <Content Include="Content\themes\gebo\lib\x-editable\inputs-ext\address\address.js" />
+    <Content Include="Content\themes\gebo\lib\x-editable\inputs-ext\typeaheadjs\typeaheadjs.js" />
+    <Content Include="Content\themes\gebo\lib\x-editable\js\bootstrap-editable.min.js" />
+    <Content Include="DatabaseScripts\该文件夹用于存放更新数据库的脚本文件（千万不要删除）.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="x64\SQLite.Interop.dll" />
+    <Content Include="x86\SQLite.Interop.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TommorrowSoft.Examine\TommorrowSoft.Examine.csproj">
+      <Project>{5A5B5659-C49D-4D6A-B2A3-02EB2106EBE9}</Project>
+      <Name>TommorrowSoft.Examine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TomorrowSoft.Framework\TomorrowSoft.Framework.csproj">
+      <Project>{6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D}</Project>
+      <Name>TomorrowSoft.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <None Include="Content\themes\gebo\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Content\themes\gebo\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Content\themes\gebo\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Content\themes\gebo\img\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="Content\themes\gebo\img\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\themes\gebo\img\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="Content\themes\gebo\video\big_buck_bunny.webm" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\PartyMoney\Index.cshtml" />
+    <Content Include="Views\PartyMoney\Create.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15641</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

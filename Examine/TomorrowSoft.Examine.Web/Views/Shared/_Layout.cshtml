@@ -1,0 +1,305 @@
+﻿@using System.Web.Mvc.Html
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>测试平台</title>
+    <!-- Bootstrap framework -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/bootstrap/css/bootstrap.min.css")"  />
+    <!-- jQuery UI theme -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/jquery-ui/css/Aristo/Aristo.css")"  />
+    <!-- tooltips-->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/jBreadcrumbs/css/BreadCrumb.css")"  />
+    <!-- tooltips-->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/qtip2/jquery.qtip.min.css")"  />
+    <!-- colorbox -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/colorbox/colorbox.css")"  />
+    <!-- code prettify -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/google-code-prettify/prettify.css")"  />
+    <!-- notifications -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/sticky/sticky.css")"  />
+    <!-- aditional icons -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/img/splashy/splashy.css")"  />
+    <!-- flags -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/img/flags/flags.css")"  />
+    <!-- datatables -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/datatables/extras/TableTools/media/css/TableTools.css")" />
+    <!-- calendar -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/fullcalendar/fullcalendar_gebo.css")"  />
+    <!-- datepicker -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/datepicker/datepicker.css")"  />
+    <!-- datepicker -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/timepicker/css/bootstrap-timepicker.css")" />
+    <!-- tag handler -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/tag_handler/css/jquery.taghandler.css")"  />
+    <!-- uniform -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/uniform/Aristo/uniform.aristo.css")"  />
+    <!-- multiselect -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/multi-select/css/multi-select.css")"  />
+    <!-- enhanced select -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/chosen/chosen.css")"  />
+    <!-- wizard -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/stepy/css/jquery.stepy.css")"  />
+    <!-- CLEditor -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/CLEditor/jquery.cleditor.css")"  />
+    <!-- colorpicker -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/colorpicker/css/colorpicker.css")"  />
+    <!-- switch buttons -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css")" />
+    <!-- hint.css -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/hint_css/hint.min.css")" />
+    <!-- smoke_js -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/smoke/themes/gebo.css")"  />
+    <!-- main styles -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/css/style.css")"  />
+    <!-- theme color-->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/css/dark.css")"  id="link_theme" />
+    <!-- dynatree -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/lib/dynatree/src/skin-vista/ui.dynatree.css")"/>
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/img/font-awesome/css/font-awesome.min.css")"/>
+    <!-- custom styles -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/custom.css")"/>
+    <link rel="stylesheet" href="@Url.Content("~/Content/card.css")"/>
+    @*        <!-- favicon -->
+            <link rel="shortcut icon" href="@Url.Content("~/Content/themes/gebo/favicon.ico")" />*@
+    <!--[if lte IE 8]>
+            <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/css/ie.css")"  />
+        <![endif]-->
+    <!--[if lt IE 9]>
+			<script src="@Url.Content("~/Content/themes/gebo/js/ie/html5.js")" type="text/javascript" ></script>
+			<script src="@Url.Content("~/Content/themes/gebo/js/ie/respond.min.js")" type="text/javascript" ></script>
+			<script src="@Url.Content("~/Content/themes/gebo/lib/flot/excanvas.min.js")" type="text/javascript" ></script>
+        <![endif]-->
+    <!--favicon.ico网站图标 -->
+    <link rel="shortcut icon" href="@Url.Content("~/Content/Images/Cooperative-black.png")"/>
+    <link rel="bookmark" href="@Url.Content("~/Content/Images/Cooperative-black.png")"/>
+    <script src="@Url.Content("~/Content/themes/gebo/js/jquery.min.js")" type="text/javascript" ></script>
+    <script type="text/javascript">
+        //* hide all elements & show preloader
+        document.documentElement.className += 'js';
+    </script>
+</head> 
+<body class="full_width">
+    <div class="style_switcher">
+        <div class="sepH_c">
+            <p>
+                颜色:</p>
+            <div class="clearfix">
+                <a href="javascript:void(0)" class="style_item jQclr dark_theme style_active" title="dark">
+                    dark</a> <a href="javascript:void(0)" class="style_item jQclr blue_theme" title="blue">
+                        blue</a> <a href="javascript:void(0)" class="style_item jQclr green_theme" title="green">
+                            green</a> <a href="javascript:void(0)" class="style_item jQclr brown_theme" title="brown">
+                                brown</a> <a href="javascript:void(0)" class="style_item jQclr eastern_blue_theme"
+                                    title="eastern_blue">eastern blue</a> <a href="javascript:void(0)" class="style_item jQclr tamarillo_theme"
+                                        title="tamarillo">tamarillo</a>
+            </div>
+        </div>
+        <div class="sepH_c">
+            <p>
+                背景:</p>
+            <div class="clearfix">
+                <span class="style_item jQptrn style_active ptrn_def" title=""></span><span class="ssw_ptrn_a style_item jQptrn"
+                    title="ptrn_a"></span><span class="ssw_ptrn_b style_item jQptrn" title="ptrn_b">
+                </span><span class="ssw_ptrn_c style_item jQptrn" title="ptrn_c"></span><span class="ssw_ptrn_d style_item jQptrn"
+                    title="ptrn_d"></span><span class="ssw_ptrn_e style_item jQptrn" title="ptrn_e">
+                </span>
+            </div>
+        </div>
+    </div>
+    <div id="maincontainer" class="clearfix">
+        <header>
+              <nav class="navbar navbar-default navbar-fixed-top" style="background:#2D2F33;" role="navigation">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <img class="brand" src="@Url.Content("~/Content/Images/Cooperative-white.png")" alt="logo" style="float:left;width:24px;padding-top:10px;padding-right:4px;"/>
+                            <a class="brand pull-left" id="brand" href="#"><span class="small">常德市项目协同管理平台</span></a>
+                            <ul class="nav navbar-nav user_menu pull-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="@Url.Content("~/Content/themes/gebo/img/user_avatar.png")"  alt="" class="user_avatar" /> <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                    <li>                                            
+                                            @(Html.ActionLink("[replacethis] 修改密码", "EditPassword", "Account", new { area = "" }, new { data_pjax = "" })
+                                                  .Replace("[replacethis]", "<i class=\"icon-off\"></i>"))
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            @(Html.ActionLink("[replacethis] 注销", "Login", "Account", new { area = "" }, null)
+                                                  .Replace("[replacethis]", "<i class=\"icon-off\"></i>"))
+                                        </li>
+                                    
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        <div id="contentwrapper">
+            <div class="main_content" id="main_content">
+                <!-- 正文部分 -->
+                @RenderBody()
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="sidebar_switch on_switch bs_ttip" data-placement="auto right"
+            data-viewport="body" title="Hide Sidebar">Sidebar switch</a>
+        <div class="sidebar">
+            <div class="sidebar_inner_scroll">
+                
+                <!-- 根据权限生成菜单 -->
+                <div class="sidebar_inner">
+                    <div id="side_accordion" class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#collapse基础数据管理" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                        <i class="glyphicon glyphicon-hdd"></i>  基础数据管理
+                                    </a>
+                                </div>
+                                <div class="accordion-body collapse" id="collapse基础数据管理">
+                                    <div class="panel-body">
+                                        <ul class="nav nav-pills nav-stacked">
+                                                <li>
+                                                    @Html.ActionLink("基础数据","Index", "Home", new { area = "Admin" },new { data_pjax = "" })
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <!-- 左边菜单 -->
+
+            </div>
+        </div>
+        <script src="@Url.Content("~/Content/themes/gebo/js/jquery.min.js")" type="text/javascript" ></script>
+        <script src="@Url.Content("~/Content/themes/gebo/js/jquery-migrate.min.js")" type="text/javascript" ></script>
+        <script src="@Url.Content("~/Content/themes/gebo/lib/jquery-ui/jquery-ui-1.10.0.custom.min.js")" type="text/javascript" ></script>
+        <!--unobtrusive ajax-->
+        <script src="@Url.Content("~/Content/js/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+        <!-- touch events for jquery ui-->
+        <script src="@Url.Content("~/Content/themes/gebo/js/forms/jquery.ui.touch-punch.min.js")" type="text/javascript" ></script>
+        <!-- easing plugin -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/jquery.easing.1.3.min.js")" type="text/javascript" ></script>
+        <!-- smart resize event -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/jquery.debouncedresize.min.js")" type="text/javascript" ></script>
+        <!-- js cookie plugin -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/jquery_cookie_min.js")" type="text/javascript" ></script>
+        <!-- main bootstrap js -->
+        <script src="@Url.Content("~/Content/themes/gebo/bootstrap/js/bootstrap.min.js")" type="text/javascript" ></script>
+        <!-- bootstrap plugins -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/bootstrap.plugins.min.js")" type="text/javascript" ></script>
+        <!-- typeahead -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/typeahead/typeahead.min.js")" type="text/javascript" ></script>
+        <!-- code prettifier -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/google-code-prettify/prettify.min.js")" type="text/javascript" ></script>
+        <!-- sticky messages -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/sticky/sticky.min.js")" type="text/javascript" ></script>
+        <!-- tooltips -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/qtip2/jquery.qtip.min.js")" type="text/javascript" ></script>
+        <!-- lightbox -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/colorbox/jquery.colorbox.min.js")" type="text/javascript" ></script>
+        <!-- jBreadcrumbs -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/jBreadcrumbs/js/jquery.jBreadCrumb.1.1.min.js")" type="text/javascript" ></script>
+        <!-- hidden elements width/height -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/jquery.actual.min.js")" type="text/javascript" ></script>
+        <!-- scroll -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/slimScroll/jquery.slimscroll.js")" type="text/javascript" ></script>
+        <!-- fix for ios orientation change -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/ios-orientationchange-fix.js")" type="text/javascript" ></script>
+        <!-- to top -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/UItoTop/jquery.ui.totop.min.js")" type="text/javascript" ></script>
+        <!-- mobile nav -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/selectNav.js")" type="text/javascript" ></script>
+        <!-- moment.js date library -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/moment/moment.min.js")" type="text/javascript" ></script>
+        <!-- common functions -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/pages/gebo_common.js")" type="text/javascript" ></script>
+        <!-- globalize for jQuery UI-->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/jquery-ui/external/globalize.js")" type="text/javascript" ></script>
+        <!-- masked inputs -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/forms/jquery.inputmask.min.js")" type="text/javascript" ></script>
+        <!-- autosize textareas -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/forms/jquery.autosize.min.js")" type="text/javascript" ></script>
+        <!-- textarea limiter/counter -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/forms/jquery.counter.min.js")" type="text/javascript" ></script>
+        <!-- datepicker -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/datepicker/bootstrap-datepicker.min.js")" type="text/javascript" ></script>
+        <!-- timepicker -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/timepicker/js/bootstrap-timepicker.min.js")" type="text/javascript" ></script>
+        <!-- tag handler -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/tag_handler/jquery.taghandler.min.js")" type="text/javascript" ></script>
+        <!-- styled form elements -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/uniform/jquery.uniform.min.js")" type="text/javascript" ></script>
+        <!-- animated progressbars -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/forms/jquery.progressbar.anim.js")" type="text/javascript" ></script>
+        <!-- multiselect -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/multi-select/js/jquery.multi-select.js")" type="text/javascript" ></script>
+        <script src="@Url.Content("~/Content/themes/gebo/lib/multi-select/js/jquery.quicksearch.js")" type="text/javascript" ></script>
+        <!-- enhanced select (chosen) -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/chosen/chosen.jquery.min.js")" type="text/javascript" ></script>
+        <!-- TinyMce WYSIWG editor -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/tinymce/jquery.tinymce.min.js")" type="text/javascript" ></script>
+        <!-- plupload and all it's runtimes and the jQuery queue widget (attachments) -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/plupload/plupload.full.min.js")" type="text/javascript" ></script>
+        <script src="@Url.Content("~/Content/themes/gebo/lib/plupload/jquery.ui.plupload/jquery.ui.plupload.js")" type="text/javascript" ></script>
+        <script src="@Url.Content("~/Content/themes/gebo/lib/plupload/i18n/zh_CN.js")" type="text/javascript" ></script>
+        <!-- colorpicker -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/colorpicker/bootstrap-colorpicker.js")" type="text/javascript" ></script>
+        <!-- password strength checker -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/complexify/jquery.complexify.min.js")" type="text/javascript" ></script>
+        <!-- switch buttons -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/bootstrap-switch/dist/js/bootstrap-switch.min.js")" type="text/javascript" ></script>
+        @* <!-- form functions -->
+	        <script src="@Url.Content("~/Content/themes/gebo/js/pages/gebo_forms.js")" type="text/javascript" ></script>*@
+        <!-- datatable -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/datatables/jquery.dataTables.min.js")" type="text/javascript" ></script>
+        <!-- additional sorting for datatables -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/datatables/jquery.dataTables.sorting.js")" type="text/javascript" ></script>
+        <!-- datatables bootstrap integration -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/datatables/jquery.dataTables.bootstrap.min.js")" type="text/javascript" ></script>
+        <!-- tables functions -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/pages/gebo_tables.js")" type="text/javascript" ></script>
+        <!-- validate -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/validation/jquery.validate.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Content/themes/gebo/lib/validation/jquery.validateextend.js")" type="text/javascript"></script>
+        <!-- tooltips -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/qtip2/jquery.qtip.min.js")" type="text/javascript"></script>
+        @*<!-- validation functions -->
+            <script src="@Url.Content("~/Content/themes/gebo/js/pages/gebo_validation.js")" type="text/javascript"></script>*@
+        <!-- My97DatePicker -->
+        <script src="@Url.Content("~/Content/js/My97DatePicker/WdatePicker.js")" type="text/javascript"></script>
+        @*<!-- 浏览器后退前进 -->
+            <script src="@Url.Content("~/Content/js/history-0.4.js")" type="text/javascript"></script>*@
+        <!-- pjax后退前进 -->
+        <script src="@Url.Content("~/Content/js/pjax/jquery.pjax.js")" type="text/javascript"></script>
+        <!-- dynatree -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/dynatree/dist/jquery.dynatree.min.js")" type="text/javascript"></script>
+        <!-- animated progressbars -->
+        <script src="@Url.Content("~/Content/themes/gebo/js/forms/jquery.progressbar.anim.js")" type="text/javascript"></script>
+        <!-- smoke_js -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/smoke/smoke.js")" type="text/javascript"></script>
+        @* <script src="@Url.Content("~/Content/js/Dialog.js")" type="text/javascript" ></script>
+             <link href="@Url.Content("~/Content/images/dialog/Dialog.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/Content/WebExplorer.css")" rel="stylesheet" type="text/css" />*@
+        <!-- 本项目特有的JS代码 -->
+        <script src="@Url.Content("~/Content/js/Examine.js")" type="text/javascript"></script>
+        <!-- 上传文件 -->
+        <script src="@Url.Content("~/Content/themes/gebo/lib/form/jquery.form.min.js")" type="text/javascript"></script>
+        <!-- 控制左边菜单 -->
+        <script type="text/javascript">
+            $(function () {
+                $("#accordion-group>a").click(function () {
+                    $(this).addClass("current")
+                .next().show()
+                .parent().sinlings().children("nav nav-list").removeClass("current")
+                .next().hide();
+                    return false;
+                });
+            });
+</script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿@using System.Web.Mvc
+@using System.Web.Mvc.Html
+@using TomorrowSoft.Examine.Web.Helps
+@using TomorrowSoft.Framework.Presentation.Mvc
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" href="@Url.Content("~/Content/themes/gebo/bootstrap/css/bootstrap.min.css")"  />
+        <script src="@Url.Content("~/Content/themes/gebo/js/jquery.min.js")" type="text/javascript" ></script>
+        <script src="@Url.Content("~/Content/themes/gebo/bootstrap/js/bootstrap.min.js")" type="text/javascript" ></script>
+    </head>
+    <body>
+        <div>
+            @if (ViewData.ContainsKey(Keys.Message))
+            {
+                @Html.Alert(ViewData[Keys.Message].ToString(), "", AlertCategory.Success)
+            }
+
+            @using (Html.BeginForm("ClearData", "Default", FormMethod.Post))
+            {
+                <button type="submit">1、清空数据</button>
+            }
+
+            @using (Html.BeginForm("InitData", "Default", FormMethod.Post))
+            {
+                <button type="submit">2、初始化数据</button>
+            }
+            
+            @using (Html.BeginForm("InitVersion", "Default", FormMethod.Post))
+            {
+                <button type="submit">3、初始化版本</button>
+            }
+            
+            @using (Html.BeginForm("UpdateDatabase", "Default", FormMethod.Post))
+            {
+                <button type="submit">4、升级数据库（@ViewData[Keys.VersionMessage]）</button>
+            }
+            
+            @using (Html.BeginForm("InitTestData", "Default", FormMethod.Post))
+            {
+                <button type="submit">5、初始化测试数据</button>
+            }
+        </div>
+        <div>
+            @Html.Button("管理员", Url.Action("Index", "Home", new { Area = "Admin" }))
+        </div>
+    </body>
+</html>

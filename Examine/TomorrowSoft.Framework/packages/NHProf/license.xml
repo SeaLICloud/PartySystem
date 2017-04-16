@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<license id="3980cc80-3bdb-4a68-9bb0-2bbca995eea0" expiration="2013-05-04T00:00:00.0000000" type="Trial" prof="nhprof" version="2" updatesExpiration="2014-Apr-03">
+  <name>jivi</name>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>DtNQwvNjZ3446QCXXOs5DbhlrIw=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>Xk5ndJrHF9Y8HjPiHFoE9aiqE/fYrzAzL3r8LJGT56iqFHq6GXtTVahtbAyTtGzXN8r/DyycU84ZxUwSUJGAVrhmh1AhmP7f9Gou3dHQ9hzk6z48kgy22264Op4cg5O2d1FG90Gg97chjpKOAspBrdF2Z+vs/FkJAavOvYYqX64=</SignatureValue>
+  </Signature>
+</license>

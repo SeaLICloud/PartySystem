@@ -1,0 +1,33 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Domain/d:CustomType/f:Quantity.cs" caret="271" fromTop="0" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Domain/d:CustomType/f:QuantitySepc.cs" caret="227" fromTop="5" />
+    <File id="0732D800-2204-4377-BD10-64AABDE9E0FF/f:App.config" caret="317" fromTop="7" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Domain/f:Role.Specification.cs" caret="299" fromTop="10" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Mapping/f:RoleMap.cs" caret="280" fromTop="5" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Domain/f:RoleIdentifier.cs" caret="118" fromTop="1" />
+    <File id="0732D800-2204-4377-BD10-64AABDE9E0FF/d:权限/d:角色/f:当创建一个简单角色时.cs" caret="360" fromTop="9" />
+    <File id="0732D800-2204-4377-BD10-64AABDE9E0FF/f:测试数据.cs" caret="763" fromTop="9" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Application/f:ISecurityService.cs" caret="1408" fromTop="18" />
+    <File id="0732D800-2204-4377-BD10-64AABDE9E0FF/d:权限/d:角色/f:当创建一个复合角色时.cs" caret="555" fromTop="12" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Application/d:Impl/f:RoleCommand.cs" caret="786" fromTop="14" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Application/f:IRoleCommand.cs" caret="228" fromTop="7" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Application/d:Impl/f:SecurityService.cs" caret="7448" fromTop="11" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Domain/f:Role.cs" caret="1534" fromTop="4" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Domain/d:CustomType/f:QuantitySepc.cs" caret="831" fromTop="17" />
+    <File id="0732D800-2204-4377-BD10-64AABDE9E0FF/f:App.config" caret="317" fromTop="7" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Domain/f:Role.Specification.cs" caret="536" fromTop="12" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Mapping/f:RoleMap.cs" caret="323" fromTop="7" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Domain/f:RoleIdentifier.cs" caret="394" fromTop="14" />
+    <File id="0732D800-2204-4377-BD10-64AABDE9E0FF/d:权限/d:角色/f:当创建一个简单角色时.cs" caret="393" fromTop="9" />
+    <File id="0732D800-2204-4377-BD10-64AABDE9E0FF/f:测试数据.cs" caret="763" fromTop="9" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Application/f:ISecurityService.cs" caret="1408" fromTop="18" />
+    <File id="0732D800-2204-4377-BD10-64AABDE9E0FF/d:权限/d:角色/f:当创建一个复合角色时.cs" caret="681" fromTop="12" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Application/f:IRoleCommand.cs" caret="228" fromTop="7" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Application/d:Impl/f:RoleCommand.cs" caret="786" fromTop="14" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Application/d:Impl/f:SecurityService.cs" caret="7448" fromTop="11" />
+    <File id="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D/d:Authorize/d:Domain/f:Role.cs" caret="1663" fromTop="9" />
+  </RecentEdits>
+</RecentFiles>

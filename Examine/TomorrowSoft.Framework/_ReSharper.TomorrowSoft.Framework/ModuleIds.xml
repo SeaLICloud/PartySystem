@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D" ModuleId="TomorrowSoft.Framework" />
+  <Module PersistentId="0732D800-2204-4377-BD10-64AABDE9E0FF" ModuleId="TomorrowSoft.Framework.Test" />
+</Modules>

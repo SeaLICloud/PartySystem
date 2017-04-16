@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>LinqSpecs</id>
+    <version>1.0</version>
+    <title>LinqSpecs</title>
+    <authors>José F. Romaniello</authors>
+    <owners>José F. Romaniello</owners>
+    <projectUrl>http://linqspecs.codeplex.com/</projectUrl>
+    <iconUrl>https://nugetgallery.blob.core.windows.net/icons/LinqSpecs.1.0.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>LinqSpecs is a framework that will help you to create specifications for Linq queries. The idea behind this project is to help the user to write, test and expose specifications as first-class objects.</description>
+    <summary>LinqSpecs is a framework that will help you to create specifications for Linq queries. The idea behind this project is to help the user to write, test and expose specifications as first-class objects.</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>linq specification bitwise</tags>
+    <references>
+      <reference file="LinqSpecs.dll" />
+    </references>
+  </metadata>
+</package>

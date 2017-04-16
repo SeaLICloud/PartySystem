@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6DD66F0F-3A0B-4EF9-99FC-29B0B4DBD99D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TomorrowSoft.Framework</RootNamespace>
+    <AssemblyName>TomorrowSoft.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsSQLServerOption />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.2.0.1.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="HibernatingRhinos.Profiler.Appender">
+      <HintPath>..\packages\NHProf\HibernatingRhinos.Profiler.Appender.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.9\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqSpecs">
+      <HintPath>..\packages\LinqSpecs.1.0\lib\LinqSpecs.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications">
+      <HintPath>..\packages\Machine.Specifications.0.6.2\lib\net40\Machine.Specifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.Clr4">
+      <HintPath>..\packages\Machine.Specifications.0.6.2\lib\net40\Machine.Specifications.Clr4.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.Should">
+      <HintPath>..\packages\Machine.Specifications.0.6.2\lib\net40\Machine.Specifications.Should.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\packages\System.Data.SQLite.1.0.91.3\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>..\packages\System.Data.SQLite.1.0.91.3\lib\net40\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\packages\System.Data.SQLite.1.0.91.3\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authorize\Application\Impl\SecurityService.SerialNumber.cs" />
+    <Compile Include="Authorize\Domain\RunningNumber.cs" />
+    <Compile Include="Authorize\Domain\RunningNumber.Specification.cs" />
+    <Compile Include="Authorize\Domain\RunningNumberIdentifier.cs" />
+    <Compile Include="Authorize\Domain\RunningNumberMask.cs" />
+    <Compile Include="Authorize\Domain\RunningNumberSpec.cs" />
+    <Compile Include="Authorize\Mapping\RunningNumberMap.cs" />
+    <Compile Include="Common\Domain\EntityFileIdentifier.cs" />
+    <Compile Include="Common\Domain\EntityFileIdentifierSpec.cs" />
+    <Compile Include="Common\Domain\File.cs" />
+    <Compile Include="Common\Domain\File.Specifiction.cs" />
+    <Compile Include="Common\Domain\FileIdentifier.cs" />
+    <Compile Include="Common\Domain\FileSpec.cs" />
+    <Compile Include="Common\Domain\IContainFiles.cs" />
+    <Compile Include="Common\Mapping\FileMap.cs" />
+    <Compile Include="Domain\CustomType\CustomDateTime.cs" />
+    <Compile Include="Domain\CustomType\IDateTime.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Aops\AopAttribute.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Aops\AopHandler.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Aops\BeforeInvokeAttribute.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Aops\AfterInvokeAttribute.cs" />
+    <Compile Include="Application\Dtos\Dto.cs" />
+    <Compile Include="Application\Maps\BaseDtoMapSpec.cs" />
+    <Compile Include="Application\Maps\DtoMap.cs" />
+    <Compile Include="Authorize\Application\IFunctionCommand.cs" />
+    <Compile Include="Authorize\Application\Impl\AuthorizedFunctionCommand.cs" />
+    <Compile Include="Authorize\Application\IAuthorizedFunctionCommand.cs" />
+    <Compile Include="Authorize\Application\IAccountCommand.cs" />
+    <Compile Include="Authorize\Application\IAuthenticationService.cs" />
+    <Compile Include="Authorize\Application\Impl\AccountCommand.cs" />
+    <Compile Include="Authorize\Application\Impl\FormsAuthenticationService.cs" />
+    <Compile Include="Authorize\Application\Impl\FunctionCommand.cs" />
+    <Compile Include="Authorize\Application\Impl\RequestLogCommand.cs" />
+    <Compile Include="Authorize\Application\Impl\RoleCommand.cs" />
+    <Compile Include="Authorize\Application\Impl\SecurityService.Account.cs" />
+    <Compile Include="Authorize\Application\Impl\SecurityService.Authority.cs" />
+    <Compile Include="Authorize\Application\Impl\SecurityService.Log.cs" />
+    <Compile Include="Authorize\Application\Impl\SecurityService.Role.cs" />
+    <Compile Include="Authorize\Application\Impl\SecurityService.Version.cs" />
+    <Compile Include="Authorize\Application\Impl\VersionCommand.cs" />
+    <Compile Include="Authorize\Application\IRoleCommand.cs" />
+    <Compile Include="Authorize\Application\ISecurityService.cs" />
+    <Compile Include="Authorize\Application\Impl\SecurityService.cs" />
+    <Compile Include="Authorize\Application\IRequestLogCommand.cs" />
+    <Compile Include="Authorize\Application\IVersionCommand.cs" />
+    <Compile Include="Authorize\Domain\Account.cs" />
+    <Compile Include="Authorize\Domain\Account.Specification.cs" />
+    <Compile Include="Authorize\Domain\AccountIdentifier.cs" />
+    <Compile Include="Authorize\Domain\AuthorityCollection.cs" />
+    <Compile Include="Authorize\Domain\AuthorityCollectionSpec.cs" />
+    <Compile Include="Authorize\Domain\IAuthority.cs" />
+    <Compile Include="Domain\CustomType\KeyValueValuePair.cs" />
+    <Compile Include="Domain\CustomType\PairDictionary.cs" />
+    <Compile Include="Domain\CustomType\ISortable.cs" />
+    <Compile Include="Domain\CustomType\ISortableCollectionSpec.cs" />
+    <Compile Include="Authorize\Domain\Role.Specification.cs" />
+    <Compile Include="Authorize\Domain\RoleAuthority.cs" />
+    <Compile Include="Authorize\Domain\RoleAuthority.Specification.cs" />
+    <Compile Include="Authorize\Domain\RoleAuthorityIdentifier.cs" />
+    <Compile Include="Authorize\Domain\AuthorityType.cs" />
+    <Compile Include="Authorize\Domain\Role.cs" />
+    <Compile Include="Authorize\Domain\Function.cs" />
+    <Compile Include="Authorize\Domain\FunctionIdentifier.cs" />
+    <Compile Include="Authorize\Domain\RoleCollection.cs" />
+    <Compile Include="Authorize\Domain\Services\IPasswordSecurity.cs" />
+    <Compile Include="Authorize\Domain\Services\PasswordSecurity.cs" />
+    <Compile Include="Authorize\Domain\RequestLog.cs" />
+    <Compile Include="Authorize\Domain\RequestLogIdentifier.cs" />
+    <Compile Include="Authorize\Domain\RoleIdentifier.cs" />
+    <Compile Include="Authorize\Domain\AccountAuthority.cs" />
+    <Compile Include="Authorize\Domain\AccountAuthorityIdentifier.cs" />
+    <Compile Include="Authorize\Domain\AccountAuthority.Specification.cs" />
+    <Compile Include="Authorize\Domain\Version.cs" />
+    <Compile Include="Authorize\Domain\Version.Specification.cs" />
+    <Compile Include="Authorize\Mapping\AccountMap.cs" />
+    <Compile Include="Authorize\Mapping\RoleAuthorityMap.cs" />
+    <Compile Include="Authorize\Mapping\FunctionMap.cs" />
+    <Compile Include="Authorize\Mapping\RequestLogMap.cs" />
+    <Compile Include="Authorize\Mapping\RoleMap.cs" />
+    <Compile Include="Authorize\Mapping\AccountAuthorityMap.cs" />
+    <Compile Include="Authorize\Mapping\VersionMap.cs" />
+    <Compile Include="Domain\Bases\IBusinessIdentifier.cs" />
+    <Compile Include="Domain\Bases\Entity.cs" />
+    <Compile Include="Domain\Bases\IEntity.cs" />
+    <Compile Include="Domain\Bases\AllIdentifier.cs" />
+    <Compile Include="Domain\CustomType\ITreeEnumerableSpec.cs" />
+    <Compile Include="Domain\CustomType\IPagedList.cs" />
+    <Compile Include="Domain\CustomType\ITreeEnumerable.cs" />
+    <Compile Include="Domain\CustomType\PagedList.cs" />
+    <Compile Include="Domain\CustomType\PageInfo.cs" />
+    <Compile Include="Domain\CustomType\PageInfoSpec.cs" />
+    <Compile Include="Domain\CustomType\PairDictionarySepc.cs" />
+    <Compile Include="Domain\CustomType\Period.cs" />
+    <Compile Include="Domain\CustomType\PeriodSpec.cs" />
+    <Compile Include="Domain\CustomType\Persent.cs" />
+    <Compile Include="Domain\CustomType\PersentSpec.cs" />
+    <Compile Include="Domain\CustomType\Quantity.cs" />
+    <Compile Include="Domain\CustomType\QuantitySepc.cs" />
+    <Compile Include="Domain\CustomType\SearchResult.cs" />
+    <Compile Include="Domain\CustomType\YearMonth.cs" />
+    <Compile Include="Domain\Exceptions\DomainErrorException.cs" />
+    <Compile Include="Domain\Exceptions\DomainException.cs" />
+    <Compile Include="Domain\Exceptions\DomainWarningException.cs" />
+    <Compile Include="Domain\Repositories\IRepository.cs" />
+    <Compile Include="Infrastructure.Crosscutting.NetFramework\Exceptions\FrameworkException.cs" />
+    <Compile Include="Infrastructure.Crosscutting.NetFramework\Exceptions\NoRowsMatchingException.cs" />
+    <Compile Include="Infrastructure.Crosscutting.NetFramework\Exceptions\TooManyRowsMatchingException.cs" />
+    <Compile Include="Infrastructure.Crosscutting.NetFramework\Keys\ConfigurationKeys.cs" />
+    <Compile Include="Infrastructure.Crosscutting.NetFramework\Keys\IConfigurationKeys.cs" />
+    <Compile Include="Infrastructure.Crosscutting.NetFramework\Logging\TraceSourceLog.cs" />
+    <Compile Include="Infrastructure.Crosscutting.NetFramework\Logging\TraceSourceLogFactory.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Adapters\ITypeAdapter.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Adapters\ITypeMapConfigurationBase.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Adapters\RegisterTypesMap.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Adapters\TypeAdapter.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Adapters\TypeMapConfiguration.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Adapters\TypeMapConfigurationBase.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Attributes\WcfTransactionAttribute.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Attributes\WcfTransactionInvoker.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Extensions\EnumClassAttribute.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Extensions\StreamExtensions.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Extensions\StringExtensions.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Extensions\ImageExtensions.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Container\IoC.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Container\RegisterToContainerAttribute.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Excel\Files.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Excel\Import.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Excel\ImportSpec.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Extensions\DateTimeExtensionMethods.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Extensions\DateTimeExtensionSpec.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Extensions\EnumExtensionMethods.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Extensions\EnumExtensionSpec.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Extensions\EnumTextAttribute.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Files\FileHelper.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Files\IFileHelper.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Logging\ILogger.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Logging\ILoggerFactory.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Logging\LoggerFactory.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Report\ExcelReport.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Report\PdfReport.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Report\Report.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Resources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure.Crosscutting\Specs\BaseActionSpec.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Specs\ActionSubject.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Specs\BaseServiceSpec.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Specs\IActionSubject.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Specs\IServiceSubject.cs" />
+    <Compile Include="Infrastructure.Crosscutting\Specs\ServiceSubject.cs" />
+    <Compile Include="Infrastructure.Crosscutting\StatePattern\InvalidOperationInStateException.cs" />
+    <Compile Include="Infrastructure.Crosscutting\StatePattern\IState.cs" />
+    <Compile Include="Infrastructure.Crosscutting\StatePattern\State.cs" />
+    <Compile Include="Infrastructure.Crosscutting\StatePattern\StateFactory.cs" />
+    <Compile Include="Infrastructure.Crosscutting\StatePattern\StatePatternSpec.cs" />
+    <Compile Include="Infrastructure.Data\Repositories\BaseClassMap.cs" />
+    <Compile Include="Infrastructure.Data\Repositories\Repository.cs" />
+    <Compile Include="Infrastructure.Data\Resources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure.Data\SessionFactories\Database.cs" />
+    <Compile Include="Infrastructure.Data\SessionFactories\DataBaseType.cs" />
+    <Compile Include="Infrastructure.Data\SessionFactories\INHibernateFactory.cs" />
+    <Compile Include="Infrastructure.Data\SessionFactories\Sql2008Factory.cs" />
+    <Compile Include="Infrastructure.Data\SessionFactories\SQLiteWebFactory.cs" />
+    <Compile Include="Infrastructure.Data\SessionFactories\SQLiteInMemoryFactory.cs" />
+    <Compile Include="Infrastructure.Data\SessionFactories\SQLiteThreadFactory.cs" />
+    <Compile Include="Infrastructure.Data\UnitOfWorks\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure.Data\UnitOfWorks\TestUnitOfWork.cs" />
+    <Compile Include="Infrastructure.Data\UnitOfWorks\UnitOfWork.cs" />
+    <Compile Include="Infrastructure.Data\UserTypes\NullableDateTimeUserType.cs" />
+    <Compile Include="Infrastructure.Data\UserTypes\PersentUserType.cs" />
+    <Compile Include="Infrastructure.Data\UserTypes\YearMonthUserType.cs" />
+    <Compile Include="Presentation.Mvc\AjaxOptionsExtensions.cs" />
+    <Compile Include="Presentation.Mvc\AlertCategory.cs" />
+    <Compile Include="Presentation.Mvc\BaseController.cs" />
+    <Compile Include="Presentation.Mvc\CustomControllerFactory.cs" />
+    <Compile Include="Presentation.Mvc\DataFormattingExtend.cs" />
+    <Compile Include="Presentation.Mvc\FormCollectionExtensions.cs" />
+    <Compile Include="Presentation.Mvc\GeboExtensions\GeboExtensions.cs" />
+    <Compile Include="Presentation.Mvc\GeboExtensions\ButtonGeboExtensions.cs" />
+    <Compile Include="Presentation.Mvc\GeboExtensions\ListGeboExtensions.cs" />
+    <Compile Include="Presentation.Mvc\GeboExtensions\PaginationGeboExtensions.cs" />
+    <Compile Include="Presentation.Mvc\GeboExtensions\PaginationLiClass.cs" />
+    <Compile Include="Presentation.Mvc\GeboExtensions\TableGeboExtensions.cs" />
+    <Compile Include="Presentation.Mvc\GeboExtensions\UploadAndDownloadGeboExtensions.cs" />
+    <Compile Include="Presentation.Mvc\GeboExtensions\VcardGeboExtensions.cs" />
+    <Compile Include="Presentation.Mvc\HtmlTags\AutoIndexColumn.cs" />
+    <Compile Include="Presentation.Mvc\HtmlTags\Group.cs" />
+    <Compile Include="Presentation.Mvc\HtmlTags\TreeTable.cs" />
+    <Compile Include="Presentation.Mvc\JavascriptHelper.cs" />
+    <Compile Include="Presentation.Mvc\RoleAuthorizationAttribute.cs" />
+    <Compile Include="Presentation.Mvc\Rule.cs" />
+    <Compile Include="Presentation.Mvc\FormValidateRuleSpec.cs" />
+    <Compile Include="Presentation.Mvc\FrameworkKeys.cs" />
+    <Compile Include="Presentation.Mvc\HtmlTags\BoundingColumn.cs" />
+    <Compile Include="Presentation.Mvc\HtmlTags\CheckBoxColumn.cs" />
+    <Compile Include="Presentation.Mvc\HtmlTags\Column.cs" />
+    <Compile Include="Presentation.Mvc\HtmlTags\Table.cs" />
+    <Compile Include="Presentation.Mvc\ImageResult.cs" />
+    <Compile Include="Presentation.Mvc\LogAttribute.cs" />
+    <Compile Include="Presentation.Mvc\TransactionAttribute.cs" />
+    <Compile Include="Presentation.Mvc\AccountAuthorizationAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Compile Include="Authorize\Domain\AuthorizedFunction.Specification.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Infrastructure.Crosscutting\Resources\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Infrastructure.Data\Resources\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
