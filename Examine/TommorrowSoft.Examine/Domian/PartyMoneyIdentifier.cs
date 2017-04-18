@@ -36,5 +36,7 @@ namespace TommorrowSoft.Examine.Domian
             string[] sub = id.Split(new[] {'/'}, 2);
             return Of(sub[1]);
         }
+
+        
     }
 }

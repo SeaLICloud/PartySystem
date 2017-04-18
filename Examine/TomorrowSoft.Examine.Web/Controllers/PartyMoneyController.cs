@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using TommorrowSoft.Examine.Application;
+using TommorrowSoft.Examine.Domian;
 using TomorrowSoft.Examine.Web.Helps;
 using TomorrowSoft.Examine.Web.Helps.BaseControllers;
 
@@ -45,5 +46,12 @@ namespace TomorrowSoft.Examine.Web.Controllers
             return View();
         }
 
+
+
+        public ActionResult Delete(string id) 
+        {
+            Service.DeletePartyMoney(PartyMoneyIdentifier.Of(id));
+            return RedirectToAction("Index");
+        }
     }
 }
