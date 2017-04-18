@@ -44,11 +44,18 @@ namespace TommorrowSoft.Examine.Application.Imp
         }
 
         //GetPartyMoney
-        private PartyMoney GetPartyMoney(PartyMoneyIdentifier id)
+        public PartyMoney GetPartyMoney(PartyMoneyIdentifier id)
         {
             if (!_repository.IsExisted(new PartyMoney.By(id))) 
                 throw new DomainErrorException("该报表不存在");
             return _repository.FindOne(new PartyMoney.By(id));
+        }
+
+        //EditPartyMoney
+        public IPartyMoneyCommand EditPartyMoney(PartyMoneyIdentifier id)
+        {
+            var partyMoneyCollection = GetPartyMoney(id);
+            return new PartyMoneyCommand(_repository,partyMoneyCollection);
         }
     }
 }

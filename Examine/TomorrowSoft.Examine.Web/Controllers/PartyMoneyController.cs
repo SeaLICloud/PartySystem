@@ -53,5 +53,30 @@ namespace TomorrowSoft.Examine.Web.Controllers
             Service.DeletePartyMoney(PartyMoneyIdentifier.Of(id));
             return RedirectToAction("Index");
         }
+
+
+        [HttpGet]
+        public ActionResult Edit(string id)
+        {
+            return View(Service.GetPartyMoney(PartyMoneyIdentifier.Of(id)));
+        }
+
+        [HttpPost]
+        public ActionResult Edit(FormCollection partyMoneyCollection, string id)
+        {
+            Service.EditPartyMoney(PartyMoneyIdentifier.Of(id))
+                .Name(partyMoneyCollection[Keys.Name])
+                .PostWage(partyMoneyCollection[Keys.PostWage])
+                .SalaryRankWage(partyMoneyCollection[Keys.SalaryRankWage])
+                .Allowance(partyMoneyCollection[Keys.Allowance])
+                .PerformanceWage(partyMoneyCollection[Keys.PerformanceWage])
+                .UnionExpenses(partyMoneyCollection[Keys.UnionExpenses])
+                .MedicalInsurance(partyMoneyCollection[Keys.MedicalInsurance])
+                .UnemploymentInsurance(partyMoneyCollection[Keys.UnemploymentInsurance])
+                .OldAgeInsurance(partyMoneyCollection[Keys.OldAgeInsurance])
+                .JobAnnuity(partyMoneyCollection[Keys.JobAnnuity])
+                .IndividualIncomeTax(partyMoneyCollection[Keys.IndividualIncomeTax]);
+            return RedirectToAction("Index");
+        }
     }
 }

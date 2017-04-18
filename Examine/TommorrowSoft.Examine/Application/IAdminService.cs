@@ -6,5 +6,7 @@ namespace TommorrowSoft.Examine.Application
     {
         IPartyMoneyCommand CreatePartyMoney(string s);
         void DeletePartyMoney(PartyMoneyIdentifier id);
+        PartyMoney GetPartyMoney(PartyMoneyIdentifier id);
+        IPartyMoneyCommand EditPartyMoney(PartyMoneyIdentifier id);
     }
 }

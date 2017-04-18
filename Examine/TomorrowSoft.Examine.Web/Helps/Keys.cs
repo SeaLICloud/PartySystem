@@ -4,6 +4,7 @@
     {
         public const string VersionMessage = "VersionMessage";
         public const string Message = "Message";
+        //字段
         public const string PartyCode = "PartyCode";
         public const string Name = "Name";
         public const string PostWage = "PostWage";
